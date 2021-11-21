@@ -1,9 +1,17 @@
+.blogs {
+    color: black;
+    text-decoration: none;
+}
+
 body {
     background-color: bisque;
-    color: rgb(67, 49, 148);
     font-size: 15px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
+}
+.container {
+    max-width: 750px;
+    margin: auto;
 }
 h1 {
     color: rgb(9, 65, 30);
@@ -13,4 +21,16 @@ h1 {
 .avatar {
     width: 330px;
     border-radius: 30px;
+    box-shadow: 4px 4px 14px rgba(0, 0, 0, 025);
+
 }
+.info p {
+    color: rgb(114, 34, 34);
+    margin: 0px;
+    /* font-style: italic; */
+    /* font-weight: bold; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    
+}
+
