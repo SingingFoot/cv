@@ -1,10 +1,13 @@
-.blogs {
+a {
     color: black;
     text-decoration: none;
 }
+a:hover {
+    text-decoration: underline;
+}
 
 body {
-    background-color: bisque;
+    background-color: rgb(238, 238, 238);
     font-size: 15px;
     font-weight: 300;
     font-family: 'Roboto', sans-serif;
@@ -19,18 +22,43 @@ h1 {
     font-weight: 50000;    
 }
 .avatar {
-    width: 330px;
+    width: 230px;
     border-radius: 30px;
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 025);
 
 }
 .info p {
-    color: rgb(114, 34, 34);
     margin: 0px;
     /* font-style: italic; */
     /* font-weight: bold; */
     text-transform: uppercase;
     letter-spacing: 2px;
     
+}
+.table {
+    width: 100%;
+}
+
+.table td {
+    padding-bottom: 10px;
+}
+
+.table tr:nth-child(even){
+    background: rgb(197, 197, 197);
+}
+
+.info {
+    display:flex;
+    margin-bottom: 20px;
+}
+
+.info-text {
+    margin-left: 40px;
+}
+
+@media (max-width: 700px) {
+    .info {
+        display: block;
+    }
 }
 
