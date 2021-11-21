@@ -1,0 +1,16 @@
+body {
+    background-color: bisque;
+    color: rgb(67, 49, 148);
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Roboto', sans-serif;
+}
+h1 {
+    color: rgb(9, 65, 30);
+    font-size: 38px;
+    font-weight: 50000;    
+}
+.avatar {
+    width: 330px;
+    border-radius: 30px;
+}
