@@ -1,103 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oleg Shynkarenko CV</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-</head>
-<body>
-<div class="container">
-        <div class="info">
-        <img src="images/OlegShynkarenko1.jpeg" alt="Oleg Shynkarenko" class="avatar">
-                <div class="info-text">
-                <h1>Oleg Shynkarenko</h1>
-                <p> Writer, engineer, explorer.</p>
-                <p> Author of 5 books and 3 films.</p>
-                <div class="blogs">
-                    <h4>Blogs:</h4>
-                    <a href="https://iwritedocs.netlify.app/" target="_blank">I Write Docs (Docusaurus)</a> |
-                    <a href="https://singingfoot.netlify.app/" target="_blank">Singing Foot (Gatsby)</a> |
-                    <a href="https://olehshynkarenko.medium.com/" target="_blank">Oleg Shynkarenko (Medium)</a>
-                </div>
-            </div>
-    </div>
-    <hr size="2" noshade color="blue"/>
-        <h3>English:</h3>
-        <p>University Postgraduate diploma in Translation & Interpreting; 16 years of practical use. C1 (advanced)-C2(proficient) level according to the CEFR guidelines: full working proficiency.</p>
-        <hr size="2" noshade color="blue"/>
-        <h3>Experience:</h3>
-        <p>
-            <ul>
-                <li>3 years in technical writing for software, hardware, gadget engineering and IoT companies;</li>
-                <li>20+ years in journalism and creative writing;</li>
-                <li>10+ years in video and audio production;</li>
-                <li>4 years in Automation unit management.</li>
-            </ul>
-            <table class="table">
-                <tr>
-                    <th>Company name</th>
-                    <th>Position</th>
-                    <th>Years of work</th>
-                </tr>
-                <tr>
-                    <td>GlobalLogic</td>
-                    <td>Senior Technical Writer</td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td>BJet</td>
-                    <td>Senior Technical Writer</td>
-                    <td>2021</td>
-                </tr>
-                <tr>
-                    <td>ASBIS</td>
-                    <td>Senior Technical Writer</td>
-                    <td>2020-2021</td>
-                </tr>
-
-            </table>
-        </p>
-        <hr size="2" noshade color="blue"/>
-        <h3>Skills:</h3>
-        <p>
-            <ul>
-                <li>Static website generators: Docusaurus, Hugo, Gatsby, Hexo, Jekyll;</li>
-                <li>CI/CD and Docs-as-Code workflow;</li>
-                <li>Markdown;</li>
-                <li>Style guides: Google, Microsoft, Vocab, Write Good etc. with linter Vale and Visual Studio Code;</li>
-                <li>Authoring: Robohelp, Framemaker;</li>
-                <li>IDE: IntelliJ IDEA, Visual Studio Code;</li>
-                <li>Design: Adobe Photoshop, Audition, After Effects, Premiere, Illustrator, Draw.io, Miro.com;</li>
-                <li>JSON, XML, API documentation;</li>
-                <li>Basic level in Java, JavaScript, Python and Android Studio;</li>
-                <li>Atlassian Confluence and Jira;</li>
-                <li>GitHub;</li>
-                <li>Trello and Slack;</li>
-                <li>Microsoft Office (Word, Excel, Power Point, Teams);</li>
-                <li>Localization: Smartcat, POeditor, Poedit.</li>
-            </ul>
-        </p>
-    <hr size="2" noshade color="blue"/>
-    <h3>Sample of work</h3>
-    <p><a href="sampleofwork.html" target="_blank">Inspect the sample of my work</a></p>
-    <hr size="2" noshade color="blue"/>
-    <h3>Projects:</h3>
-    <ul>
-        <li><a href="github.com/SingingFoot" target="_blank">GitHub</a></li>
-    </ul>
-    
-    <h3>Contacts:</h3>
-    <form>
-        <label for="message">Print your message</label>
-        <textarea id="message"></textarea>
-        <br>
-        <input type="submit" value="Send me your message">
-    </form>
-</div>
-</body>
+<html>
+   <meta charset="UTF-8">
+   <link rel="stylesheet" href="style.css">
+   <head>
+      <title>Sample page</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+      <script>
+      var settings = {
+  "url": "https://api.openweathermap.org/data/2.5/forecast?q=Irpin,804&units=metric&appid=fc341543b020fb49164d8280a67986ab",
+  "method": "GET",
+  "timeout": 0,
+};
+$.ajax(settings).done(function (response) {
+  console.log(response);
+  var content = response.list[1].wind.speed;
+$("#windSpeed").append(content);
+var content2 = response.list[1].visibility;
+$("#visibility").append(content2);
+var content3 = response.city.name;
+$("#cityName").append(content3);
+var content4 = response.list[2].main.temp;
+$("#temperature").append(content4);
+});
+      </script>
+   </head>
+   <body>
+      <div class="container">
+         <h1 class="title">Current Weather</h1> 
+      <ul>
+         <li><p>city name: <span id="cityName"></span> </p></li>
+         <li><p>wind speed: <span id="windSpeed"></span> </p></li>
+         <li><p>visibility: <span id="visibility"></span> </p></li>
+         <li><p>temperature: <span id="temperature"></span> </p></li>
+      </ul>
+      </div>
+   </body>
 </html>
