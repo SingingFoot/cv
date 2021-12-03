@@ -13,13 +13,13 @@
 };
 $.ajax(settings).done(function (response) {
   console.log(response);
-  var content = response.list[1].wind.speed;
+  var content = response.list[0].wind.speed;
 $("#windSpeed").append(content);
-var content2 = response.list[1].visibility;
+var content2 = response.list[0].visibility;
 $("#visibility").append(content2);
 var content3 = response.city.name;
 $("#cityName").append(content3);
-var content4 = response.list[4].main.temp;
+var content4 = response.list[0].main.temp;
 $("#temperature").append(content4);
 });
       </script>
